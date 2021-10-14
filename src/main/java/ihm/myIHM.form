@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ihm.myIHM">
+  <grid id="27dc6" binding="panelMain" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="425" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-13611444"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="4272f" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="130" height="130"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-13611444"/>
+        </properties>
+        <border type="etched" title="chat" title-justification="2">
+          <font/>
+          <title-color color="-4"/>
+        </border>
+        <children>
+          <component id="5812d" class="javax.swing.JTextPane" binding="okTextPane" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-527361"/>
+              <contentType value="text/plain"/>
+              <dropMode value="INSERT"/>
+              <editable value="false"/>
+              <foreground color="-16777216"/>
+              <text value="ok"/>
+            </properties>
+          </component>
+          <vspacer id="b61ec">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+        </children>
+      </grid>
+      <component id="6431d" class="javax.swing.JTextField" binding="enterYourMessageTextField" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="130" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-527361"/>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+          <toolTipText value="enter your message"/>
+          <verifyInputWhenFocusTarget value="true"/>
+          <visible value="true"/>
+        </properties>
+      </component>
+      <grid id="12b90" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="1" left="1" bottom="1" right="1"/>
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13611444"/>
+        </properties>
+        <border type="etched" title="Salon" title-justification="2">
+          <font/>
+          <title-color color="-1119508"/>
+        </border>
+        <children>
+          <scrollpane id="b4932">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="d7b36" class="javax.swing.JList" binding="list1" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-13611444"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+      <component id="5db23" class="javax.swing.JButton" binding="OK">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <actionCommand value="send"/>
+          <autoscrolls value="false"/>
+          <background color="-13611444"/>
+          <borderPainted value="true"/>
+          <contentAreaFilled value="true"/>
+          <doubleBuffered value="false"/>
+          <enabled value="true"/>
+          <focusCycleRoot value="false"/>
+          <focusPainted value="true"/>
+          <font style="1"/>
+          <foreground color="-4"/>
+          <hideActionText value="false"/>
+          <text value="send"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
