@@ -7,9 +7,11 @@ import java.awt.event.ActionListener;
 public class myIHM {
     private JTextField enterYourMessageTextField;
     private JButton OK;
-    private JTextPane okTextPane;
+    private JTextPane textPanel;
     private JList list1;
     private JPanel panelMain;
+    private JTextField textField1;
+    private JButton créerButton;
 
     public myIHM() {
         OK.addActionListener(new ActionListener() {
@@ -22,9 +24,11 @@ public class myIHM {
 
     public static void main(String[] args){
         JFrame frame = new JFrame("myIHM");
-        frame.setContentPane(new myIHM().panelMain);
+        myIHM ihm = new myIHM();
+        frame.setContentPane(ihm.panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+        ihm.textPanel.setText("rbrbr");
     }
 }
