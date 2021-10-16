@@ -66,7 +66,7 @@ public class EchoClient {
                                     json.addProperty("msg", msg);
                                     break;
                                 case "4":
-                                    json.addProperty("type", "connexion");
+                                    json.addProperty("type", "nom");
                                     System.out.println("Entrez votre nom d'utilisateur");
                                     msg = stdIn.readLine();
                                     json.addProperty("msg", msg);

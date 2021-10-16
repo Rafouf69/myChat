@@ -19,9 +19,9 @@ public class EchoServerMultiThreaded {
         return clientInfo;
     }
 
-    private static ArrayList<String> listeSalon = new ArrayList<>();
+    private static HashMap<String, String> listeSalon = new HashMap<>();
 
-    public static ArrayList<String> getSalonInfo() {
+    public static HashMap<String, String> getSalonInfo() {
         return listeSalon;
     }
 
