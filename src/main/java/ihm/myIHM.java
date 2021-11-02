@@ -33,7 +33,6 @@ public class myIHM {
     private JLabel labelNom;
     private JButton envoyerNomButton;
     private JTextField textFieldChanger;
-    private DefaultListModel listModel = new DefaultListModel();
     private JComboBox comboBoxSalon;
     private JLabel labelSalon;
 
@@ -53,9 +52,6 @@ public class myIHM {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-        ihm.msgTextPanel.setText("rbrbr");
-
-
 
         final Socket echoSocket;
         final PrintStream socOut;
@@ -86,10 +82,12 @@ public class myIHM {
             ihm.comboBoxSalon.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    JsonObject json = new JsonObject();
-                    json.addProperty("type", "choisirCanal");
-                    json.addProperty("msg", ihm.comboBoxSalon.getSelectedItem().toString());
-                    socOut.println(json.toString());
+                    if(ihm.comboBoxSalon.getItemCount()!=0){
+                        JsonObject json = new JsonObject();
+                        json.addProperty("type", "choisirCanal");
+                        json.addProperty("msg", ihm.comboBoxSalon.getSelectedItem().toString());
+                        socOut.println(json.toString());
+                    }
                 }
             });
 
@@ -146,6 +144,12 @@ public class myIHM {
                                 case "listeSalon":
                                     Type listType = new TypeToken<ArrayList<String>>() {}.getType();
                                     ArrayList<String> listeSalon = new Gson().fromJson(json.get("msg"), listType);
+                                    ihm.comboBoxSalon.removeAllItems();
+                                    /*for(int i=0; i<ihm.comboBoxSalon.getItemCount(); i++){
+                                        System.out.println(ihm.comboBoxSalon.getItemAt(0));
+                                        ihm.comboBoxSalon.removeItemAt(0);
+                                    }*/
+                                    System.out.println(ihm.comboBoxSalon.getItemCount());
                                     for(String salon : listeSalon){
                                         ihm.comboBoxSalon.addItem(salon);
                                     }

@@ -8,6 +8,8 @@ package stream;
 
 import java.io.*;
 import java.net.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -183,6 +185,15 @@ public class ClientThread
                             }
                         }
                     }.start();
+
+                    JsonArray jsonListeSalonReturn = new JsonArray();
+
+                    for(String nomSalon: listeSalon.keySet()){
+                        String jsonString = "{\"nom\":\"" +nomSalon+ "\", \"historique\":\"" +listeSalon.get(nomSalon)+ "\"}";
+                        jsonListeSalonReturn.add(new JsonParser().parse(jsonString).getAsJsonObject());
+                    }
+
+                    Files.writeString(Path.of("target/classes/history.json"), "{\"listeSalon\":"+jsonListeSalonReturn.toString()+"}");
                 }
             }
             socOut.close();

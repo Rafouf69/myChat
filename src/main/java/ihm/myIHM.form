@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ihm.myIHM">
   <grid id="27dc6" binding="panelMain" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-    <margin top="0" left="0" bottom="0" right="0"/>
+    <margin top="5" left="5" bottom="5" right="5"/>
     <constraints>
-      <xy x="20" y="20" width="442" height="400"/>
+      <xy x="20" y="20" width="800" height="600"/>
     </constraints>
     <properties>
-      <background color="-13611444"/>
+      <background color="-14078145"/>
+      <minimumSize width="575" height="450"/>
+      <preferredSize width="675" height="500"/>
     </properties>
-    <border type="none"/>
+    <border type="empty" title="Our Chat App" title-justification="2">
+      <font name="Fira Code" size="16"/>
+      <title-color color="-4"/>
+    </border>
     <children>
       <grid id="4272f" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
@@ -18,10 +23,10 @@
           </grid>
         </constraints>
         <properties>
-          <background color="-13611444"/>
+          <background color="-14078145"/>
         </properties>
-        <border type="etched" title="chat" title-justification="2">
-          <font/>
+        <border type="empty" title="Chat" title-justification="2">
+          <font name="Fira Code"/>
           <title-color color="-4"/>
         </border>
         <children>
@@ -40,11 +45,14 @@
               <component id="5812d" class="javax.swing.JTextPane" binding="msgTextPanel">
                 <constraints/>
                 <properties>
-                  <background color="-527361"/>
+                  <background color="-16777216"/>
                   <contentType value="text/plain"/>
                   <dropMode value="INSERT"/>
                   <editable value="false"/>
-                  <foreground color="-16777216"/>
+                  <font name="Fira Code"/>
+                  <foreground color="-4"/>
+                  <selectedTextColor color="-4"/>
+                  <selectionColor color="-1119508"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -58,10 +66,10 @@
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-13611444"/>
+          <background color="-14078145"/>
         </properties>
-        <border type="etched" title="Salon" title-justification="2">
-          <font/>
+        <border type="empty" title="Salon" title-justification="2">
+          <font name="Fira Code"/>
           <title-color color="-1119508"/>
         </border>
         <children>
@@ -70,7 +78,12 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-13611444"/>
+              <background color="-13156786"/>
+              <borderPainted value="true"/>
+              <contentAreaFilled value="true"/>
+              <focusPainted value="false"/>
+              <focusable value="false"/>
+              <font name="Fira Code"/>
               <foreground color="-4"/>
               <text value="Actualiser"/>
             </properties>
@@ -79,16 +92,22 @@
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-13156786"/>
+              <font name="Fira Code"/>
+              <foreground color="-4"/>
+              <maximumRowCount value="15"/>
+            </properties>
             <clientProperties>
               <html.disable class="java.lang.Boolean" value="true"/>
             </clientProperties>
           </component>
           <component id="ac1a0" class="javax.swing.JLabel" binding="labelSalon">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Fira Code"/>
               <foreground color="-4"/>
               <text value="Label"/>
             </properties>
@@ -101,10 +120,10 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-13611444"/>
+          <background color="-14078145"/>
         </properties>
-        <border type="etched" title="Message" title-justification="2">
-          <font/>
+        <border type="empty" title="Message" title-justification="2">
+          <font name="Fira Code"/>
           <title-color color="-4"/>
         </border>
         <children>
@@ -114,9 +133,9 @@
               <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-13611444"/>
+              <background color="-14078145"/>
             </properties>
-            <border type="none"/>
+            <border type="empty"/>
             <children>
               <component id="5db23" class="javax.swing.JButton" binding="envoyerMessageButton">
                 <constraints>
@@ -125,7 +144,7 @@
                 <properties>
                   <actionCommand value="send"/>
                   <autoscrolls value="false"/>
-                  <background color="-13611444"/>
+                  <background color="-13156786"/>
                   <borderPainted value="true"/>
                   <contentAreaFilled value="true"/>
                   <defaultCapable value="true"/>
@@ -133,14 +152,14 @@
                   <enabled value="true"/>
                   <focusCycleRoot value="false"/>
                   <focusPainted value="false"/>
-                  <font style="1"/>
+                  <font name="Fira Code"/>
                   <foreground color="-4"/>
                   <hideActionText value="false"/>
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="11"/>
                   <margin top="5" left="5" bottom="5" right="5"/>
                   <selected value="true"/>
-                  <text value="send"/>
+                  <text value="Send"/>
                 </properties>
               </component>
             </children>
@@ -151,9 +170,9 @@
               <grid row="0" column="0" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-13611444"/>
+              <background color="-14078145"/>
             </properties>
-            <border type="none"/>
+            <border type="empty"/>
             <children>
               <component id="6431d" class="javax.swing.JTextField" binding="enterYourMessageTextField" default-binding="true">
                 <constraints>
@@ -162,7 +181,8 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <background color="-527361"/>
+                  <background color="-16777216"/>
+                  <foreground color="-4"/>
                   <requestFocusEnabled value="true"/>
                   <text value=""/>
                   <toolTipText value="enter your message"/>
@@ -180,22 +200,24 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-13611444"/>
+          <background color="-14078145"/>
         </properties>
-        <border type="etched" title="Nouveau salon" title-justification="2">
-          <font/>
+        <border type="empty" title="Nouveau salon" title-justification="2">
+          <font name="Fira Code"/>
           <title-color color="-4"/>
         </border>
         <children>
           <component id="95533" class="javax.swing.JTextField" binding="nomSalonTextField">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-4"/>
-              <foreground color="-16777216"/>
+              <background color="-16777216"/>
+              <foreground color="-4"/>
+              <inheritsPopupMenu value="false"/>
+              <margin top="2" left="6" bottom="2" right="6"/>
+              <verifyInputWhenFocusTarget value="true"/>
+              <visible value="true"/>
             </properties>
           </component>
           <component id="66b3a" class="javax.swing.JButton" binding="creerSalonButton">
@@ -203,17 +225,20 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-13611444"/>
+              <background color="-13156786"/>
               <focusable value="false"/>
+              <font name="Fira Code"/>
               <foreground color="-4"/>
+              <margin top="5" left="5" bottom="5" right="5"/>
               <text value="Créer"/>
             </properties>
           </component>
           <component id="5bb5e" class="javax.swing.JLabel" binding="labelError">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Fira Code"/>
               <foreground color="-4"/>
               <text value="Label"/>
             </properties>
@@ -226,15 +251,16 @@
           <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-13611444"/>
+          <background color="-14078145"/>
         </properties>
-        <border type="none"/>
+        <border type="empty"/>
         <children>
           <component id="b785c" class="javax.swing.JLabel" binding="labelConnected">
             <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Fira Code"/>
               <foreground color="-4"/>
               <text value="Label"/>
             </properties>
@@ -245,9 +271,9 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-13611444"/>
+              <background color="-14078145"/>
             </properties>
-            <border type="none"/>
+            <border type="empty"/>
             <children>
               <component id="908e9" class="javax.swing.JTextField" binding="textFieldChanger">
                 <constraints>
@@ -256,9 +282,12 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <background color="-4"/>
+                  <background color="-16777216"/>
+                  <doubleBuffered value="false"/>
                   <focusTraversalPolicyProvider value="true"/>
-                  <foreground color="-16777216"/>
+                  <font name="Fira Code"/>
+                  <foreground color="-4"/>
+                  <text value=""/>
                 </properties>
               </component>
               <component id="cd6ac" class="javax.swing.JButton" binding="envoyerNomButton">
@@ -266,18 +295,23 @@
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <background color="-13611444"/>
+                  <background color="-13156786"/>
+                  <enabled value="true"/>
+                  <focusPainted value="false"/>
+                  <focusable value="false"/>
+                  <font name="Fira Code"/>
                   <foreground color="-4"/>
-                  <text value="Changer nom"/>
+                  <text value="Changer pseudo"/>
                 </properties>
               </component>
             </children>
           </grid>
           <component id="bfe1d" class="javax.swing.JLabel" binding="labelNom">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Fira Code"/>
               <foreground color="-4"/>
               <text value="Label"/>
             </properties>
